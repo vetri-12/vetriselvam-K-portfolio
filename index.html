@@ -3,67 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Software Solutions Consultant - Vetriselvam K</title>
+  <title>About - Vetriselvam K</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background: linear-gradient(to bottom right, #F8F4E3, #ffffff);" class="text-black font-sans">
+<body style="background-color:#F8F4E3;" class="text-black font-sans min-h-screen flex flex-col">
 
-  <!-- Header -->
+  <!-- Global Header -->
   <header style="background-color: #0047AB;" class="shadow p-5 fixed w-full top-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <a href="index.html" class="text-white font-bold text-xl tracking-wide">VK.</a>
       <nav class="space-x-4 md:space-x-6">
-        <a href="about.html" class="text-white hover:text-[#F8F4E3] transition">About</a>
-        <a href="skills.html" class="text-white hover:text-[#F8F4E3] transition">Skills</a>
-        <a href="projects.html" class="text-white hover:text-[#F8F4E3] transition">Projects</a>
-        <a href="contact.html" class="text-white hover:text-[#F8F4E3] transition">Contact</a>
+        
+        <!-- Active Page (Permanent Underline) -->
+        <a href="about.html" class="text-white font-bold relative pb-1">
+          About
+          <span class="absolute left-0 bottom-0 w-full h-0.5 bg-[#F8F4E3]"></span>
+        </a>
+        
+        <!-- Inactive Pages (Animated Hover Underline) -->
+        <a href="skills.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          Skills
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="projects.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          Projects
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="contact.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          Contact
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="pt-24 min-h-screen flex items-center pb-12">
-    <section class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <!-- Main Content -->
+  <main class="flex-grow pt-32 pb-16 px-6 max-w-4xl mx-auto w-full">
+    
+    <h1 class="text-4xl font-bold mb-8 text-center" style="color:#0047AB;">About Me</h1>
+    
+    <div class="space-y-6 text-lg text-black/90">
+      <p>
+        I work at the intersection of business operations, software architecture, and emerging AI technologies. My expertise lies in understanding complex business challenges and translating them into practical, scalable software solutions.
+      </p>
       
-      <!-- Left Column: Image -->
-      <div class="flex justify-center md:justify-center order-1">
-        <img src="VETRI.jpg" alt="Vetriselvam K" 
-             class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-3xl shadow-2xl ring-4 ring-white transform hover:scale-105 transition duration-500" />
-      </div>
-      
-      <!-- Right Column: Text & Call to Actions -->
-      <div class="text-center md:text-left order-2">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4" style="color: #0047AB;">
-          Vetriselvam K
-        </h1>
-        <h2 class="text-xl md:text-2xl font-semibold text-black/90 mb-6 leading-snug">
-          Software Solutions Consultant <br class="hidden md:block"/> 
-          <span class="text-lg font-medium text-black/70">AI & Software Development | Business Analysis | ERP & SaaS</span>
-        </h2>
-        <p class="text-lg text-black/80 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
-          Bridging business needs with technical execution. I specialize in translating operational challenges into concrete requirements, designing solution architectures, and delivering functional systems through AI-assisted development, rigorous testing, and seamless deployment.
-        </p>
+      <p>
+        As a Software Solutions Consultant at Vensanix Global, I manage the end-to-end software delivery lifecycle. My approach starts with deep business analysis—gathering requirements, defining functional workflows, and architecting the solution. I then execute the technical implementation using AI-assisted development (working primarily with Laravel, Filament PHP, and Tailwind CSS), followed by rigorous functional testing and production deployment. 
+      </p>
 
-        <!-- Button Hierarchy -->
-        <div class="flex flex-wrap justify-center md:justify-start gap-4">
-          <a href="projects.html" 
-             class="bg-[#0047AB] text-white px-6 py-3 rounded-lg shadow-md font-medium hover:bg-blue-900 transition duration-300">
-            View Projects
-          </a>
-          <a href="about.html" 
-             class="bg-transparent border-2 border-[#0047AB] text-[#0047AB] px-6 py-3 rounded-lg font-medium hover:bg-[#0047AB] hover:text-white transition duration-300">
-            About Me
-          </a>
-        </div>
-      </div>
+      <p>
+        Recently, I architected and deployed a live, custom B2B ERP system for a client in the facade and construction industry, automating their measurement, procurement, and financial workflows. I also develop and manage corporate web presences using WordPress, handling everything from domain configuration to client requirement translation.
+      </p>
 
-    </section>
+      <p>
+        My long-term focus is on deepening my technical capabilities in SaaS architecture, cloud infrastructure, and AI integration to build robust, market-facing technology products. I thrive in roles where I can bridge the gap between strategic business goals and technical execution.
+      </p>
+    </div>
+
   </main>
-
-  <!-- Footer -->
+  
   <footer class="text-center py-6 text-black/60">
-    © 2026 Vetriselvam K | Designed with passion and purpose
+    © 2026 Vetriselvam K | About Page
   </footer>
-
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>Projects - Vetriselvam K</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background-color: #F8F4E3;" class="text-black font-sans min-h-screen flex flex-col">
+<body style="background-color: #F8F4E3;" class="text-black font-sans min-h-screen flex flex-col relative">
 
   <!-- Global Header -->
   <header style="background-color: #0047AB;" class="shadow p-5 fixed w-full top-0 z-50">
@@ -61,22 +61,23 @@
           <li><strong>Testing & Deployment:</strong> Conducted comprehensive functional testing and supported live implementation and client workflow validation.</li>
         </ul>
 
-        <h3 class="font-semibold text-lg mb-3 border-t pt-4">Sanitized System Previews:</h3>
+        <h3 class="font-semibold text-lg mb-3 border-t pt-4">Sanitized System Previews (Click to Expand):</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Note: Added 'lightbox-trigger' class and hover effects to the images -->
           <div class="border rounded p-2 bg-gray-50">
-            <img src="vensanix-erp-advanced-fabricator-measurements.png" alt="Fabricator Measurement Module" class="w-full h-auto rounded shadow-sm border border-gray-200" />
+            <img src="vensanix-erp-advanced-fabricator-measurements.png" alt="Fabricator Measurement Module" class="lightbox-trigger w-full h-auto rounded shadow-sm border border-gray-200 cursor-pointer hover:opacity-80 transition-opacity duration-200" />
             <p class="text-xs text-center mt-2 text-gray-600">Fabricator Measurement Module</p>
           </div>
           <div class="border rounded p-2 bg-gray-50">
-            <img src="vensanix-erp-automated-material-procurement.png" alt="Automated Material Procurement" class="w-full h-auto rounded shadow-sm border border-gray-200" />
+            <img src="vensanix-erp-automated-material-procurement.png" alt="Automated Material Procurement" class="lightbox-trigger w-full h-auto rounded shadow-sm border border-gray-200 cursor-pointer hover:opacity-80 transition-opacity duration-200" />
             <p class="text-xs text-center mt-2 text-gray-600">Automated Material Procurement</p>
           </div>
           <div class="border rounded p-2 bg-gray-50">
-            <img src="vensanix-erp-document-generation-workflows.png" alt="PDF & Document Generation Workflows" class="w-full h-auto rounded shadow-sm border border-gray-200" />
+            <img src="vensanix-erp-document-generation-workflows.png" alt="PDF & Document Generation Workflows" class="lightbox-trigger w-full h-auto rounded shadow-sm border border-gray-200 cursor-pointer hover:opacity-80 transition-opacity duration-200" />
             <p class="text-xs text-center mt-2 text-gray-600">PDF & Document Generation</p>
           </div>
           <div class="border rounded p-2 bg-gray-50">
-            <img src="vensanix-erp-logistics-delivery-challan-tracking.png" alt="Logistics & Delivery Challan Tracking" class="w-full h-auto rounded shadow-sm border border-gray-200" />
+            <img src="vensanix-erp-logistics-delivery-challan-tracking.png" alt="Logistics & Delivery Challan Tracking" class="lightbox-trigger w-full h-auto rounded shadow-sm border border-gray-200 cursor-pointer hover:opacity-80 transition-opacity duration-200" />
             <p class="text-xs text-center mt-2 text-gray-600">Delivery Challan Tracking</p>
           </div>
         </div>
@@ -106,8 +107,71 @@
 
     </div>
   </main>
+  
   <footer class="text-center py-6 text-black/60">
     © 2026 Vetriselvam K | Projects Page
   </footer>
+
+  <!-- Lightbox Modal Overlay (Hidden by default) -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
+    <button id="close-lightbox" class="absolute top-6 right-8 text-white text-4xl hover:text-gray-300 focus:outline-none">&times;</button>
+    <img id="lightbox-img" src="" alt="Expanded View" class="max-w-[90%] max-h-[90vh] rounded shadow-2xl object-contain transform scale-95 transition-transform duration-300" />
+  </div>
+
+  <!-- Lightbox JavaScript logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.getElementById('close-lightbox');
+      const triggers = document.querySelectorAll('.lightbox-trigger');
+
+      // Open Lightbox
+      const openLightbox = (src) => {
+        lightboxImg.src = src;
+        lightbox.classList.remove('hidden');
+        
+        // Slight delay to allow CSS transition to trigger after removing 'hidden'
+        setTimeout(() => {
+          lightbox.classList.remove('opacity-0');
+          lightboxImg.classList.remove('scale-95');
+          lightboxImg.classList.add('scale-100');
+        }, 10);
+      };
+
+      // Close Lightbox
+      const closeLightbox = () => {
+        lightbox.classList.add('opacity-0');
+        lightboxImg.classList.remove('scale-100');
+        lightboxImg.classList.add('scale-95');
+        
+        // Wait for animation to finish before hiding the div
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+          lightboxImg.src = '';
+        }, 300);
+      };
+
+      // Attach click events to all images
+      triggers.forEach(img => {
+        img.addEventListener('click', () => openLightbox(img.src));
+      });
+
+      // Close events
+      closeBtn.addEventListener('click', closeLightbox);
+      
+      // Close when clicking outside the image
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      // Close when pressing the Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
 </body>
 </html>

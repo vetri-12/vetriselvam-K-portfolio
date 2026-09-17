@@ -11,50 +11,65 @@
   <!-- Header -->
   <header style="background-color: #0047AB;" class="shadow p-5 fixed w-full top-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <div></div>
-      <nav class="space-x-4">
-        <a href="about.html" target="_blank" class="text-white hover:text-[#F8F4E3] font-semibold">About</a>
-        <a href="skills.html" target="_blank" class="text-white hover:text-[#F8F4E3] font-semibold">Skills</a>
-        <a href="projects.html" target="_blank" class="text-white hover:text-[#F8F4E3] font-semibold">Projects</a>
-        <a href="contact.html" target="_blank" class="text-white hover:text-[#F8F4E3] font-semibold">Contact</a>
+      <!-- You can add a text logo here if you want in the future -->
+      <a href="index.html" class="text-white font-bold text-xl tracking-wide">VK.</a>
+      <nav class="space-x-4 md:space-x-6">
+        <!-- Removed target="_blank" so pages load in the same tab -->
+        <a href="about.html" class="text-white hover:text-[#F8F4E3] transition">About</a>
+        <a href="skills.html" class="text-white hover:text-[#F8F4E3] transition">Skills</a>
+        <a href="projects.html" class="text-white hover:text-[#F8F4E3] transition">Projects</a>
+        <a href="contact.html" class="text-white hover:text-[#F8F4E3] transition">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <main class="pt-24">
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-4">
-      <img src="VETRI.jpg" alt="Vetri Profile" 
-           class="w-40 h-40 rounded-full shadow-xl object-cover mb-6 border-4" 
-           style="border-color: #0047AB;" />
-      <h2 class="text-4xl font-bold" style="color: #0047AB;">Vetriselvam K</h2>
-      <h3 class="text-2xl font-semibold mt-2 text-black">Software Solutions Consultant | AI & Software Development | Business Analysis | ERP & SaaS</h3>
-      <p class="mt-4 text-lg max-w-xl text-black/80">
-        Bridging business needs with technical execution. I specialize in translating operational challenges into concrete requirements, designing solution architectures, and delivering functional systems through AI-assisted development, rigorous testing, and seamless deployment.
-      </p>
+  <main class="pt-24 min-h-screen flex items-center pb-12">
+    <!-- Two-column grid on md screens and larger -->
+    <section class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Column: Text & Call to Actions -->
+      <div class="text-center md:text-left order-2 md:order-1">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" style="color: #0047AB;">
+          Vetriselvam K
+        </h1>
+        <h2 class="text-xl md:text-2xl font-semibold text-black/90 mb-6 leading-snug">
+          Software Solutions Consultant <br class="hidden md:block"/> 
+          <span class="text-lg font-medium text-black/70">AI & Software Development | Business Analysis | ERP & SaaS</span>
+        </h2>
+        <p class="text-lg text-black/80 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+          Bridging business needs with technical execution. I specialize in translating operational challenges into concrete requirements, designing solution architectures, and delivering functional systems through AI-assisted development, rigorous testing, and seamless deployment.
+        </p>
 
-      <div class="mt-6 flex flex-wrap justify-center gap-4">
-        <a href="about.html" target="_blank"
-           class="bg-[#0047AB] text-[#F8F4E3] px-4 py-2 rounded hover:bg-black transition duration-300">
-          About Me
-        </a>
-        <a href="projects.html" target="_blank"
-           class="bg-[#F8F4E3] text-[#0047AB] px-4 py-2 rounded hover:bg-[#dcd7c3] transition duration-300">
-          View Projects
-        </a>
-        
-        <!-- Resume buttons temporarily hidden until the updated PDF is ready -->
-        <!-- 
-        <a href="VETRISELVAM K.pdf.pdf" target="_blank"
-           class="bg-[#0047AB] text-[#F8F4E3] px-4 py-2 rounded hover:bg-black transition duration-300">
-          View Resume
-        </a>
-        <a href="VETRISELVAM K.pdf.pdf" download
-           class="bg-[#F8F4E3] text-[#0047AB] px-4 py-2 rounded hover:bg-[#dcd7c3] transition duration-300">
-          Download Resume
-        </a> 
-        -->
+        <!-- Button Hierarchy -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+          <!-- Primary Action -->
+          <a href="projects.html" 
+             class="bg-[#0047AB] text-white px-6 py-3 rounded-lg shadow-md font-medium hover:bg-blue-900 transition duration-300">
+            View Projects
+          </a>
+          <!-- Secondary Action -->
+          <a href="about.html" 
+             class="bg-transparent border-2 border-[#0047AB] text-[#0047AB] px-6 py-3 rounded-lg font-medium hover:bg-[#0047AB] hover:text-white transition duration-300">
+            About Me
+          </a>
+          
+          <!-- Resume buttons temporarily hidden -->
+          <!-- 
+          <a href="VETRISELVAM K.pdf.pdf" 
+             class="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md font-medium hover:bg-black transition duration-300">
+            View Resume
+          </a>
+          -->
+        </div>
       </div>
+
+      <!-- Right Column: Image -->
+      <div class="flex justify-center md:justify-end order-1 md:order-2">
+        <img src="VETRI.jpg" alt="Vetriselvam K" 
+             class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-3xl shadow-2xl ring-4 ring-white transform hover:scale-105 transition duration-500" />
+      </div>
+
     </section>
   </main>
 

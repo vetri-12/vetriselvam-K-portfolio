@@ -8,15 +8,29 @@
 </head>
 <body style="background: linear-gradient(to bottom right, #F8F4E3, #ffffff);" class="text-black font-sans">
 
-  <!-- Header -->
+  <!-- Global Header -->
   <header style="background-color: #0047AB;" class="shadow p-5 fixed w-full top-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <a href="index.html" class="text-white font-bold text-xl tracking-wide">VK.</a>
       <nav class="space-x-4 md:space-x-6">
-        <a href="about.html" class="text-white hover:text-[#F8F4E3] transition">About</a>
-        <a href="skills.html" class="text-white hover:text-[#F8F4E3] transition">Skills</a>
-        <a href="projects.html" class="text-white hover:text-[#F8F4E3] transition">Projects</a>
-        <a href="contact.html" class="text-white hover:text-[#F8F4E3] transition">Contact</a>
+        
+        <a href="about.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          About
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="skills.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          Skills
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="projects.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          Projects
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="contact.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          Contact
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
       </nav>
     </div>
   </header>
@@ -44,7 +58,6 @@
           Bridging business needs with technical execution. I specialize in translating operational challenges into concrete requirements, designing solution architectures, and delivering functional systems through AI-assisted development, rigorous testing, and seamless deployment.
         </p>
 
-        <!-- Button Hierarchy -->
         <div class="flex flex-wrap justify-center md:justify-start gap-4">
           <a href="projects.html" 
              class="bg-[#0047AB] text-white px-6 py-3 rounded-lg shadow-md font-medium hover:bg-blue-900 transition duration-300">

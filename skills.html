@@ -7,45 +7,68 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body style="background-color: #F8F4E3;" class="text-black font-sans min-h-screen flex flex-col">
-  <header style="background-color: #0047AB;" class="shadow p-5 text-center">
-    <h1 class="text-3xl font-bold text-[#F8F4E3]">Core Competencies</h1>
+
+  <!-- Global Header -->
+  <header style="background-color: #0047AB;" class="shadow p-5 fixed w-full top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-white font-bold text-xl tracking-wide">VK.</a>
+      <nav class="space-x-4 md:space-x-6">
+        
+        <a href="about.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          About
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
+        <!-- Active Page -->
+        <a href="skills.html" class="text-white font-bold relative pb-1">
+          Skills
+          <span class="absolute left-0 bottom-0 w-full h-0.5 bg-[#F8F4E3]"></span>
+        </a>
+        
+        <a href="projects.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          Projects
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="contact.html" class="text-white font-semibold relative group pb-1 transition-colors hover:text-[#F8F4E3]">
+          Contact
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F8F4E3] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
+      </nav>
+    </div>
   </header>
-  <main class="flex-grow py-16 px-6 max-w-5xl mx-auto w-full">
-    <a href="index.html" class="text-[#0047AB] hover:underline text-sm mb-8 inline-block">&larr; Back to Home</a>
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-32 pb-16 px-6 max-w-5xl mx-auto w-full">
+    <h1 class="text-4xl font-bold mb-10 text-center" style="color:#0047AB;">Core Competencies</h1>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
       
-      <!-- Skill 1 -->
       <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
         <h3 class="text-xl font-bold mb-2" style="color:#0047AB;">Business Analysis</h3>
         <p class="text-sm text-gray-600">Requirements gathering, workflow definition, and stakeholder management.</p>
       </div>
 
-      <!-- Skill 2 -->
       <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
         <h3 class="text-xl font-bold mb-2" style="color:#0047AB;">ERP & SaaS Implementation</h3>
         <p class="text-sm text-gray-600">B2B system configuration, business process automation, and client onboarding.</p>
       </div>
 
-      <!-- Skill 3 -->
       <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
         <h3 class="text-xl font-bold mb-2" style="color:#0047AB;">Software Architecture</h3>
         <p class="text-sm text-gray-600">Solution design, module structuring, and translating operations into tech logic.</p>
       </div>
 
-      <!-- Skill 4 -->
       <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
         <h3 class="text-xl font-bold mb-2" style="color:#0047AB;">AI-Assisted Development</h3>
         <p class="text-sm text-gray-600">Leveraging AI to generate, refine, and deploy code (Laravel, Filament PHP, Tailwind).</p>
       </div>
 
-      <!-- Skill 5 -->
       <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
         <h3 class="text-xl font-bold mb-2" style="color:#0047AB;">Functional Testing</h3>
         <p class="text-sm text-gray-600">UAT, workflow validation, and ensuring application behavior meets business rules.</p>
       </div>
 
-      <!-- Skill 6 -->
       <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
         <h3 class="text-xl font-bold mb-2" style="color:#0047AB;">Web Deployment</h3>
         <p class="text-sm text-gray-600">WordPress implementation, web hosting setup, DNS management, and live deployment.</p>
@@ -53,6 +76,7 @@
 
     </div>
   </main>
+  
   <footer class="text-center py-6 text-black/60">
     © 2026 Vetriselvam K | Skills Page
   </footer>
